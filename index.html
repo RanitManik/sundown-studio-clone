@@ -15,7 +15,7 @@
 <div id="body-wrapper">
     <header>
         <img src="assets/images/logo.svg" alt="">
-        <nav>
+        <nav id="navElement">
             <ul>
                 <li><a href="#">Work</a></li>
                 <li><a href="#">Studio</a></li>
@@ -39,8 +39,10 @@
             </div>
         </section>
         <hr>
-        <video autoplay muted loop data-object-fit="cover"
-               src="assets/videos/video.mp4"></video>
+        <div class="video-container">
+            <video autoplay muted loop data-object-fit="cover"
+                   src="assets/videos/video.mp4"></video>
+        </div>
         <div class="carousel">
             <div class="carousel-component">
                 <span>Environments</span>
@@ -60,10 +62,10 @@
             </div>
         </div>
         <section class="second-section">
-            <h2>
+            <h1>
                 We are a group of design-driven, goal-focused creators, producers, and designers who believe that the
                 details make all the difference.
-            </h2>
+            </h1>
             <div>
                 <img src="assets/images/nike_detail%20shot.png" alt="Nike detail shot">
                 <p>
@@ -72,6 +74,71 @@
                     relationships are the most important things we build.
                 </p>
                 <div class="villain-shape"></div>
+            </div>
+        </section>
+        <section class="third-section">
+            <div class="heading-container">
+                <div class="red-dot"></div>
+                <h2>featured projects</h2>
+            </div>
+            <div class="featured-projects">
+                <ul>
+                    <li><a href="#">Converse SoHo
+                        <p>converse
+                            <span>Environment</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">NYFW Popup
+                        <p>afterpay
+                            <span>Experimental</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">Capezio NYC Flagship
+                        <p>capezio
+                            <span>Environment</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">Carmelo Anthony 7pm In Brooklyn Set
+                        <p>wake sports entertainment
+                            <span>Environment</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">Kelce Super Bowl Party
+                        <p>wake sports entertainment
+                            <span>Experiment</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">Play New Kidvision
+                        <p>nike
+                            <span>Environment</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">Makers Studio HOI
+                        <p>nike
+                            <span>Experiment</span>
+                        </p>
+                    </a>
+                    </li>
+                    <li><a href="#">50th Anniversary
+                        <p>nike <span>Environment</span>
+                        </p>
+                    </a>
+                    </li>
+                </ul>
+                <button>
+                    <a href="#">All Projects</a>
+                    <svg class="svg-arrow" width="33" height="10" viewBox="0 0 33 10" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5H31" stroke="currentColor" stroke-linecap="square"/>
+                        <path d="M28.5 1.5L32 5L28.5 8.5" stroke="currentColor" stroke-linecap="square"/>
+                    </svg>
+                </button>
             </div>
         </section>
     </main>

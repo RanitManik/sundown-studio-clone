@@ -14,22 +14,22 @@ body {
   font-weight: 400;
   font-size: calc(0.5357142857vw + 0.5178571429rem);
 }
-@media screen and (min-width: 40rem) {
-  body {
-    padding-inline: 2rem;
-  }
-}
-@media screen and (max-width: 40rem) {
-  body {
-    padding-inline: 1.25rem;
-  }
-}
 
 header {
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 40rem) {
+  header {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  header {
+    margin-inline: 1.25rem;
+  }
 }
 @media (min-width: 40rem) {
   header > img {
@@ -64,6 +64,9 @@ nav > ul > li {
 nav > ul > li:hover a {
   color: white;
 }
+nav > ul > li:hover .menu-icon div {
+  background-color: white;
+}
 nav > ul > li::after {
   content: "";
   background-color: black;
@@ -84,10 +87,34 @@ nav > ul > li > a {
   text-decoration: none;
   color: black;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.33rem;
+}
+nav > ul > li > a .menu-icon {
+  display: inline-flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  align-items: center;
+}
+nav > ul > li > a .menu-icon > * {
+  width: 16px;
+  height: 1px;
+  background: black;
 }
 
 .first-section {
   position: relative;
+}
+@media screen and (min-width: 40rem) {
+  .first-section {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .first-section {
+    margin-inline: 1.25rem;
+  }
 }
 @media screen and (min-width: 40rem) {
   .first-section {
@@ -146,6 +173,16 @@ nav > ul > li > a {
 
 hr {
   border: 0.5px solid #C1BCB6;
+}
+@media screen and (min-width: 40rem) {
+  hr {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  hr {
+    margin-inline: 1.25rem;
+  }
 }
 @media screen and (min-width: 40rem) {
   hr {
@@ -222,11 +259,22 @@ hr {
     transform: translate(-20%, 30%);
   }
 }
+@media screen and (min-width: 40rem) {
+  .video-container {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .video-container {
+    margin-inline: 1.25rem;
+  }
+}
+
 video {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 1rem;
+  border-radius: 1.5em;
   position: relative;
 }
 @media screen and (max-width: 40rem) {
@@ -316,7 +364,17 @@ video {
   align-items: start;
   position: relative;
 }
-.second-section > h2 {
+@media screen and (min-width: 40rem) {
+  .second-section {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .second-section {
+    margin-inline: 1.25rem;
+  }
+}
+.second-section > h1 {
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -327,7 +385,7 @@ video {
   line-height: 1.4;
   font-size: 1em;
 }
-@media screen and (max-width: 75rem) {
+@media screen and (max-width: 40rem) {
   .second-section > div > p {
     font-size: 1.4em;
   }
@@ -337,7 +395,7 @@ video {
     justify-content: left;
     margin-top: 3.75em;
   }
-  .second-section h2 {
+  .second-section h1 {
     font-size: 2.5em;
     margin-bottom: 10%;
   }
@@ -353,7 +411,7 @@ video {
     margin-top: 6em;
     padding-inline: 3em 4.5em;
   }
-  .second-section h2 {
+  .second-section h1 {
     margin-bottom: 30%;
     font-size: 3.75em;
     max-width: 55vw;
@@ -367,7 +425,7 @@ video {
     margin-top: 8.75em;
     padding-inline: 5.625em;
   }
-  .second-section h2 {
+  .second-section h1 {
     margin-bottom: 20%;
     font-size: 4.25em;
     max-width: 56vw;
@@ -402,7 +460,7 @@ video {
   top: 20%;
   left: 20%;
   filter: blur(20px);
-  animation: villain-motion 6s alternate infinite ease-in-out;
+  animation: villain-motion 6s alternate infinite linear;
 }
 
 @keyframes villain-motion {
@@ -414,6 +472,170 @@ video {
     filter: blur(30px);
     transform: translate(-10%, 10%) skew(-12deg);
   }
+}
+.third-section {
+  min-height: 200vh;
+}
+
+.third-section {
+  margin-top: 10em;
+}
+.third-section > .heading-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 40rem) {
+  .third-section > .heading-container {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .third-section > .heading-container {
+    margin-inline: 1.25rem;
+  }
+}
+.third-section > .heading-container h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.third-section > .heading-container > .red-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #fe330a;
+  display: inline-block;
+}
+.third-section > .featured-projects {
+  margin-top: 4em;
+}
+.third-section > .featured-projects > ul {
+  margin-bottom: 4em;
+}
+.third-section > .featured-projects > ul > li {
+  cursor: pointer;
+  position: relative;
+  overflow-x: hidden;
+  border-bottom: 1px solid #C1BCB6;
+}
+@media screen and (min-width: 40rem) {
+  .third-section > .featured-projects > ul > li {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .third-section > .featured-projects > ul > li {
+    padding-inline: 1.25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .third-section > .featured-projects > ul > li {
+    padding-block: 2em;
+  }
+}
+@media screen and (max-width: 75rem) {
+  .third-section > .featured-projects > ul > li {
+    padding-block: 1.5em;
+  }
+}
+.third-section > .featured-projects > ul > li::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ff9831;
+  z-index: -1;
+  transition: all ease 0.2s;
+}
+.third-section > .featured-projects > ul > li:hover::before {
+  top: 0;
+}
+.third-section > .featured-projects > ul > li > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+@media screen and (min-width: 75rem) {
+  .third-section > .featured-projects > ul > li > a {
+    font-size: 3.25em;
+  }
+}
+@media screen and (max-width: 75rem) and (min-width: 40rem) {
+  .third-section > .featured-projects > ul > li > a {
+    font-size: 2.75em;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .third-section > .featured-projects > ul > li > a {
+    font-size: 1.75em;
+  }
+}
+.third-section > .featured-projects > ul > li > a p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: right;
+  text-transform: uppercase;
+}
+.third-section > .featured-projects > ul > li > a p span {
+  display: block;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.4);
+}
+.third-section > .featured-projects > button {
+  font-size: 1em;
+  padding: 0.7em 1.5em;
+  border: 1px solid #C1BCB6;
+  border-radius: 100rem;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+}
+@media screen and (min-width: 40rem) {
+  .third-section > .featured-projects > button {
+    margin-inline: 2rem;
+  }
+}
+@media screen and (max-width: 40rem) {
+  .third-section > .featured-projects > button {
+    margin-inline: 1.25rem;
+  }
+}
+.third-section > .featured-projects > button:hover a {
+  color: white;
+}
+.third-section > .featured-projects > button:hover .svg-arrow {
+  color: white;
+  stroke: white;
+}
+.third-section > .featured-projects > button::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all ease-in-out 0.2s;
+  z-index: -1;
+}
+.third-section > .featured-projects > button:hover::after {
+  border-radius: 0;
+  top: 0;
+}
+.third-section > .featured-projects > button a {
+  text-decoration: none;
+  color: black;
+  margin-right: 0.5em;
 }
 
 /*# sourceMappingURL=main.css.map */
