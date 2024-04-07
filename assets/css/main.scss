@@ -79,7 +79,7 @@ nav > ul {
       color: white;
     }
 
-    &:hover .menu-icon div{
+    &:hover .menu-icon div {
       background-color: white;
     }
 
@@ -597,3 +597,18 @@ video {
     }
   }
 }
+
+.fixed-image-container {
+  height: 30vw;
+  width: 24vw;
+  border-radius: 1rem;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 25%;
+  display: none;
+  background-size: cover;
+  background-position: center;
+}
+
+
