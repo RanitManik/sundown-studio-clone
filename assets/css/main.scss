@@ -259,24 +259,24 @@ hr {
 
 .video-container {
   @include inline-margin;
-}
 
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 1.5em;
-  position: relative;
-  @media screen and (max-width: $screen-mobile) {
-    margin-bottom: 2em;
-  }
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1.5em;
+    position: relative;
+    @media screen and (max-width: $screen-mobile) {
+      margin-bottom: 2em;
+    }
 
-  @media screen and (max-width: $screen-tablet) and (min-width: $screen-mobile) {
-    margin-bottom: 4em;
-  }
+    @media screen and (max-width: $screen-tablet) and (min-width: $screen-mobile) {
+      margin-bottom: 4em;
+    }
 
-  @media screen and (min-width: $screen-tablet) {
-    margin-bottom: 6em;
+    @media screen and (min-width: $screen-tablet) {
+      margin-bottom: 6em;
+    }
   }
 }
 
@@ -416,7 +416,7 @@ video {
       object-fit: cover;
       object-position: center;
       display: block;
-      border-radius: .5rem;
+      border-radius: .5em;
       position: relative;
       z-index: 1;
     }
@@ -466,7 +466,7 @@ video {
     gap: .5rem;
 
     h2 {
-      font-size: .9rem;
+      font-size: max(0.9em, 0.9rem);
       font-weight: 400;
       text-transform: uppercase;
       display: inline-block;
@@ -534,7 +534,7 @@ video {
           }
 
           p {
-            font-size: .9rem;
+            font-size: max(.9rem, 0.25em);
             font-weight: 300;
             text-align: right;
             text-transform: uppercase;
@@ -601,14 +601,29 @@ video {
 .fixed-image-container {
   height: 30vw;
   width: 24vw;
-  border-radius: 1rem;
   position: fixed;
   z-index: 99;
   left: 50%;
   top: 25%;
+  border-radius: 1em;
   display: none;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+.fixed-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.fixed-image-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 

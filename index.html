@@ -12,11 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 </head>
 <body>
-<div class="fixed-image-container">
-    <video autoplay muted loop>
-        <source src="assets/images/featured%20projects/project02" type="video/mp4">
-    </video>
-</div>
+<div class="fixed-image-container"></div>
 <div id="body-wrapper">
     <header>
         <img src="assets/images/logo.svg" alt="">
@@ -45,8 +41,8 @@
         </section>
         <hr>
         <div class="video-container">
-            <video autoplay muted loop data-object-fit="cover"
-                   src="assets/videos/video.mp4"></video>
+            <video poster="assets/images/video-thumbnail.png" autoplay muted loop data-object-fit="cover"
+                   src="assets/images/video.mp4"></video>
         </div>
         <div class="carousel">
             <div class="carousel-component">
@@ -87,50 +83,57 @@
                 <h2>featured projects</h2>
             </div>
             <div class="featured-projects">
-                <ul>
-                    <li data-image="assets/images/featured%20projects/project01.webp"><a href="#">Converse SoHo
+                <ul id="projects-list">
+                    <li data-image="assets/images/Converse-SoHo" data-type="video"><a href="#">Converse
+                        SoHo
                         <p>converse
                             <span>Environment</span>
                         </p>
                     </a>
                     </li>
-                    <li data-image="assets/images/featured%20projects/project02"><a href="#">NYFW Popup
+                    <li data-image="assets/images/NYFW-Popup" data-type="video"><a href="#">NYFW
+                        Popup
                         <p>afterpay
                             <span>Experimental</span>
                         </p>
                     </a>
                     </li>
-                    <li><a href="#">Capezio NYC Flagship
+                    <li data-image="assets/images/Capezio-NYC-Flagship.mp4" data-type="video"><a href="#">Capezio NYC
+                        Flagship
                         <p>capezio
                             <span>Environment</span>
                         </p>
                     </a>
                     </li>
-                    <li><a href="#">Carmelo Anthony 7pm In Brooklyn Set
+                    <li data-image="assets/images/Carmelo-Anthony-7pm-In-Brooklyn-Set.mp4" data-type="video"><a
+                            href="#">Carmelo
+                        Anthony 7pm In Brooklyn Set
                         <p>wake sports entertainment
                             <span>Environment</span>
                         </p>
                     </a>
                     </li>
-                    <li><a href="#">Kelce Super Bowl Party
+                    <li data-image="assets/images/Kelce-Super-Bowl-Party" data-type="video"><a href="#">Kelce Super Bowl
+                        Party
                         <p>wake sports entertainment
                             <span>Experiment</span>
                         </p>
                     </a>
                     </li>
-                    <li><a href="#">Play New Kidvision
+                    <li data-image="assets/images/Play-New-Kidvision" data-type="video"><a href="#">Play New Kidvision
                         <p>nike
                             <span>Environment</span>
                         </p>
                     </a>
                     </li>
-                    <li><a href="#">Makers Studio HOI
+                    <li data-image="assets/images/Makers-Studio-HOI.webp" data-type="image"><a href="#">Makers Studio
+                        HOI
                         <p>nike
                             <span>Experiment</span>
                         </p>
                     </a>
                     </li>
-                    <li><a href="#">50th Anniversary
+                    <li data-image="assets/images/50th-Anniversary.webp" data-type="image"><a href="#">50th Anniversary
                         <p>nike <span>Environment</span>
                         </p>
                     </a>

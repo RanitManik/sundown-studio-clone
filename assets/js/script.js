@@ -22,17 +22,21 @@ handleMediaQueryChange(mediaQuery);
 
 mediaQuery.addEventListener('change', handleMediaQueryChange);
 
-let elemC = document.querySelector(".fixed-image-container");
-let fixed = document.querySelectorAll(".featured-projects ul li");
-fixed.forEach(fixedItem => {
+let fixedItemContainer = document.querySelector(".fixed-image-container");
+let projectItems = document.querySelectorAll(".featured-projects ul li");
+
+projectItems.forEach(fixedItem => {
     fixedItem.addEventListener("mouseenter", () => {
-        elemC.style.display = "block";
-        let image = fixedItem.getAttribute("data-image");
-        console.log(image);
-        elemC.style.backgroundImage = `url(${image})`;
+        fixedItemContainer.style.display = "block";
+        let dataImage = fixedItem.getAttribute("data-image");
+        let dataType = fixedItem.getAttribute("data-type");
+        if (dataType === "image") {
+            fixedItemContainer.innerHTML = `<img src="${dataImage}" alt="">`;
+        } else if (dataType === "video") {
+            fixedItemContainer.innerHTML = `<video autoplay muted loop                   src="${dataImage}"></video>`;
+        }
     });
     fixedItem.addEventListener("mouseleave", () => {
-        elemC.style.display = "none";
+        fixedItemContainer.style.display = "none";
     });
 });
-
