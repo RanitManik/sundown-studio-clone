@@ -491,40 +491,42 @@ hr {
         cursor: pointer;
         position: relative;
         overflow-x: hidden;
-        @include inline-padding;
-        border-bottom: 1px solid #C1BCB6;
         @media screen and (min-width: $screen-tablet) {
           padding-block: 2em;
+          @include inline-padding;
+          border-bottom: 1px solid #C1BCB6;
         }
         @media screen and (max-width: $screen-tablet) {
           padding-block: 1.5em;
         }
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: -100%;
-          height: 100%;
-          left: 0;
-          right: 0;
-          background-color: #ff9831;
-          z-index: -1;
-          transition: all ease 0.2s;
-        }
+        @media screen and (min-width: $screen-tablet) {
+          &::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            background-color: #ff9831;
+            z-index: -1;
+            transition: all ease 0.2s;
+          }
 
-        &:hover::before {
-          top: 0;
+          &:hover::before {
+            top: 0;
+          }
         }
 
         > a {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           color: black;
           text-decoration: none;
           font-weight: 500;
           @media screen and (min-width: $screen-tablet) {
             font-size: 3.25em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
           }
           @media screen and (max-width: $screen-tablet) and (min-width: $screen-mobile) {
             font-size: 2.75em;
@@ -536,8 +538,11 @@ hr {
           p {
             font-size: max(.9rem, 0.25em);
             font-weight: 300;
-            text-align: right;
             text-transform: uppercase;
+
+            @media screen and (min-width: $screen-tablet) {
+              text-align: right;
+            }
 
             span {
               display: block;
@@ -626,4 +631,43 @@ hr {
   display: block;
 }
 
+.project-asset-container {
+  display: none;
+}
 
+@media screen and (max-width: $screen-tablet) {
+  .projects-list {
+    @include inline-margin;
+    display: grid;
+    @media screen and (min-width: 28rem) {
+      grid-template-columns: 1fr 1fr;
+    }
+    gap: 1em;
+
+    li {
+      padding-inline: 0;
+      border: none;
+
+      a {
+        p {
+          margin-top: .5rem;
+        }
+      }
+
+
+      .project-asset-container {
+        display: block;
+        margin-bottom: 1rem;
+
+        video, img {
+          height: 60vw;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+          border-radius: 1em;
+        }
+      }
+    }
+  }
+}
