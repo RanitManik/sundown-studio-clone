@@ -33,3 +33,10 @@ if (mediaQueryLaptop.matches) {
         });
     });
 }
+
+// loader Animation
+
+const loader = document.getElementById("loader");
+setTimeout(() => {
+    loader.style.top = "-100%";
+}, 4000)

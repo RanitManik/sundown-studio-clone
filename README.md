@@ -2,13 +2,12 @@
 
 This is a clone of the famous website [Sundown Studio](https://www.sundown-studio.com/), recreated using HTML, SCSS, and
 JavaScript. The project utilizes several frameworks/libraries
-including [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll), [GSAP ScrollTrigger](https://greensock.com/scrolltrigger/),
+including [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll)
 and [SwiperJS](https://swiperjs.com/) for enhanced functionality and interactivity.
 
 ## Features
 
 - **Smooth Scrolling**: Implemented using Locomotive Scroll, providing a seamless navigation experience.
-- **Scroll-based Animations**: Leveraging GSAP ScrollTrigger for scroll-based animations and effects.
 - **Image Slider**: Utilizing SwiperJS to create dynamic and responsive image sliders.
 - **Responsive Design**: Ensuring the website looks great and functions well across various devices and screen sizes.
 
@@ -90,5 +89,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-I would like to express my gratitude to [The Sheryians Coding School](https://www.youtube.com/@thesheryianscodingschool) for providing these engaging
-  challenge and guiding through the solution that help me enhance my skills and build real-world projects.
+I would like to express my gratitude to [The Sheryians Coding School](https://www.youtube.com/@thesheryianscodingschool)
+for providing these engaging
+challenge and guiding through the solution that help me enhance my skills and build real-world projects.
