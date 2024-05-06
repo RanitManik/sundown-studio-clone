@@ -24,9 +24,9 @@ let projectItems = document.querySelectorAll(".featured-projects ul li");
 if (mediaQueryLaptop.matches) {
     projectItems.forEach(fixedItem => {
         fixedItem.addEventListener("mouseenter", () => {
-            fixedItemContainer.style.display = "block";
             let dataInfo = fixedItem.querySelector(".project-asset-container");
             fixedItemContainer.innerHTML = dataInfo.innerHTML;
+            fixedItemContainer.style.display = "block";
         });
         fixedItem.addEventListener("mouseleave", () => {
             fixedItemContainer.style.display = "none";
