@@ -26,10 +26,10 @@ if (mediaQueryLaptop.matches) {
         fixedItem.addEventListener("mouseenter", () => {
             let dataInfo = fixedItem.querySelector(".project-asset-container");
             fixedItemContainer.innerHTML = dataInfo.innerHTML;
-            fixedItemContainer.style.display = "block";
+            fixedItemContainer.style.visibility = "visible";
         });
         fixedItem.addEventListener("mouseleave", () => {
-            fixedItemContainer.style.display = "none";
+            fixedItemContainer.style.visibility = "hidden";
         });
     });
 }

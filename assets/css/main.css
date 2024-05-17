@@ -654,7 +654,7 @@ hr {
   left: 50%;
   top: 25%;
   border-radius: 1em;
-  display: none;
+    visibility: hidden;
   overflow: hidden;
 }
 
